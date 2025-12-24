@@ -2,11 +2,7 @@ package nilx
 
 import "database/sql"
 
-func Byte(v byte) sql.NullByte {
-	return sql.NullByte{Byte: v, Valid: true}
-}
-
-func BytePtr(v *byte) sql.NullByte {
+func Byte(v *byte) sql.NullByte {
 	if v == nil {
 		return sql.NullByte{}
 	}
